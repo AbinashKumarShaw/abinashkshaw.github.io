@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Abinash -- Codes</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="images/avatar.jpg" target="_blank" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1 style="font-family:Helvatica;font-size:28px;"><i><strong>Abinash Kumar Shaw</strong></i></h1>
+					<p style="font-size:18px;">Senior Research Fellow<br/>
+					Department of Physics<br>
+					<a href="http://www.iitkgp.ac.in" target="_blank" >Indian Institute of Technology Kharagpur</a><br/>
+					India - 721 302.</p>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+			
+				<section>
+					<hr>
+					<h1><span style="font-family:Helvatica;"><bf><i>Large-scale structure and <br>Reionization Simulations</i></bf></span></h1>
+					<div>
+					<p style="color:black;">Our group at <i>IIT Kharagpur (India)</i> have developed a semi-numerical package to simulate the comoving boxes of reionization 21-cm brightness temperature distribution at the relevant redshifts. The codes are written in C language and OPENMP parallelized. This package is reasonably faster in simulating 21-cm maps at high resolutions. It is more accurate as the dark matter density is generated considering full non-linear gravitational evolution instead of approximate perturbation theories. The redshift space distortion is also incorporated in our codes. The reionization simulation has three fundamental steps for which we have separate sets of codes which are arranged sequentially below.</p> 
+					<ul style="color:black;">
+					<li style="margin-bottom:15px;"><h2><span style="color:crimson; font-weight:bold;"><i>N</i>-body Code</span></h2>
+					It employs Particle-Mesh algorithm to gravitationaly evolve the initial perturbations in the dark matter density field. The code is OPENMP parallelized. The code is publicly available on the Github at <a href="https://github.com/rajeshmondal18/N-body" target="_blank"><bf>this link</bf></a>.<br><br> You may also clone it from your terminal using <br><code> git clone https://github.com/rajeshmondal18/N-body.git </code><br><br>Another version where you can control the number of OPENMP threads is available in the <bf>threads</bf> branch at the same link. To clone that run the following from your terminal<br><code> git clone --branch threads https://github.com/rajeshmondal18/N-body.git </code><br><br><span style="color:maroon;">You may look into the README and the documentation for more details and citations.</span></li>
+					
+					<li style="margin-bottom:20px;"><h2><span style="color:crimson; font-weight:bold;">FoF Halo Finder</span></h2>
+					It employs Friends-of-Friend algorithm to find halos(groups) of dark matter particles from the output of the previous <i>N</i>-body simulations. The code is publicly available on the Github at <a href="https://github.com/rajeshmondal18/FoF-Halo-finder" target="_blank"><bf>this link</bf></a>.<br><br> In order to clone it from your terminal type <br><code> git clone https://github.com/rajeshmondal18/FoF-Halo-finder.git </code><br><br>If you are using the <i>N</i>-body code from <bf>threads</bf> branch then use the same for the FoF too. To clone the <bf>threads</bf> version from your terminal run the following<br><code> git clone --branch threads https://github.com/rajeshmondal18/FoF-Halo-finder.git </code></li>
+					
+					<li style="margin-bottom:20px;"><h2><span style="color:crimson; font-weight:bold;">ReionYuga</span></h2>
+					It uses halo catalogue and the dark matter distribution from the pervious two steps to generate the reionization 21-cm brightness temperature distribution from a three parameter model. User are advised to look into <a href="https://doi.org/10.1093/mnras/staa2090", target="_blank"><bf>Shaw et al. (2020)</bf></a> for the details of the parameters. This piece of codes are also OPENMP parallelized. The code is publicly available on the Github at <a href="https://github.com/rajeshmondal18/ReionYuga" target="_blank"><bf>this link</bf></a>.<br><br> In order to clone it from your terminal type <br><code> git clone https://github.com/rajeshmondal18/ReionYuga.git </code><br><br>To clone the <bf>threads</bf> version from your terminal run the following<br><code> git clone --branch threads https://github.com/rajeshmondal18/ReionYuga.git </code></li>
+					</ul>
+					<h2><span style="font-family:Helvatica;"><bf>Pre-requisites</bf></span></h2>
+					<p style="color:black;">To compile and run the above set of codes you must have the following installed in your system.</p>
+					<ul style="color:black;">
+					<li style="margin-bottom:8px;">GNU C Compiler</li>
+					<li style="margin-bottom:8px;">GNU Make</li>
+					<li style="margin-bottom:8px;">FFTW3 (installed with --enable-float --enable-threads and --enable-openmp)</li>
+					<li style="margin-bottom:8px;">GNU Scientific Library (version 2.x.x)</li>
+					</ul>
+					</div>
+					
+				<hr>
+				<h1><span style="font-family:Helvatica;"><bf><i>Fast Bispectrum Estimator</i></bf></span></h1>
+					<div>
+					<h3 style="color:black">Coming Soon .......</h3>
+					</div>
+				<hr>
+				</section>
+				
+			</div>
+			
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="mailto:abinashkumarshaw@gmail.com" class="icon solid fa-envelope"><span class="label">Gmail</span></a></li>
+						<li><a href="https://github.com/AbinashKumarShaw" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://scholar.google.com/citations?user=rcdajtkAAAAJ&hl=en" target="_blank" class="ai ai-google-scholar-square ai-x"></a></li>
+						<li><a href="https://ui.adsabs.harvard.edu/search/filter_author_facet_hier_fq_author=NOT&filter_author_facet_hier_fq_author=(author_facet_hier%3A%221%2FShaw%2C%20A%2FShaw%2C%20A%20%20K%22%20OR%20author_facet_hier%3A%221%2FShaw%2C%20A%2FShaw%2C%20Abinash%20Kumar%22%20OR%20author_facet_hier%3A%221%2FShaw%2C%20A%2FShaw%2C%20Abinash%20K%22)&filter_author_facet_hier_fq_author=author_facet_hier%3A%221%2FShaw%2C%20A%2FShaw%2C%20A%20%20K%22&fq=%7B!type%3Daqp%20v%3D%24fq_author%7D&fq_author=((author_facet_hier%3A%221%2FShaw%2C%20A%2FShaw%2C%20A%20%20K%22%20OR%20author_facet_hier%3A%221%2FShaw%2C%20A%2FShaw%2C%20Abinash%20Kumar%22%20OR%20author_facet_hier%3A%221%2FShaw%2C%20A%2FShaw%2C%20Abinash%20K%22)%20NOT%20author_facet_hier%3A%221%2FShaw%2C%20A%2FShaw%2C%20A%20%20K%22)&q=shaw%2C%20abinash%20kumar&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank" class="ai ai-ads-square ai-x"></a></li>
+						<li><a href="https://arxiv.org/search/?searchtype=author&query=Shaw%2C+A+K" target="_blank" class="ai ai-arxiv-square ai-x"></a></li>
+						<li><a href="https://www.researchgate.net/profile/Abinash_Shaw" target="_blank" class="icon brands fa-researchgate"><span class="label">Researchgate</span></a></li>
+						<li><a href="https://www.facebook.com/aurobindoabinash" target="_blank" class="icon brands fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/shawabinashkumar" target="_blank" class="icon brands fa-instagram"><span class="label">Dribbble</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Abinash Kumar Shaw</li><li>Updated on: Feb, 2021</li><!--<li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>-->
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+				
+	</body>
+</html>
